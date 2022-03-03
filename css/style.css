@@ -12,15 +12,17 @@ body{
 }
 .cards{
     grid-template-columns: repeat(4,1fr);
-    padding: 20px;
+    padding: 90px;
     grid-gap: 40px;
 	display: grid;
 }
 .card{
-    background-color: #1c1b29;
+    *background-color: #1c1b29;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
+.card:hover {-webkit-transform:scale(0.9);transform:scale(1.1);-webkit-transition: all .5s ease-in-out;}
+.card {overflow:hidden;}
 .container{
     position: relative;
     clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
@@ -47,6 +49,7 @@ img{
         #0100ec,
         #fb36f4
     );
+	opacity:0.5;
 }
 .card2>.container:after{
     background-image: linear-gradient(
@@ -73,7 +76,7 @@ img{
     padding: 20px 10px;
 }
 .details>h3{
-    color: #ffffff;
+    *color: #ffffff;
     font-weight: 600;
     font-size: 18px;
     margin: 10px 0 15px 0;
