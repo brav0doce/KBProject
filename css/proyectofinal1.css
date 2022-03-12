@@ -1,8 +1,13 @@
+::selection {
+    background-color: #fe4641;
+    color: #FFFFFF;
+} 
 @import url ("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
 @ import url ("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");	
 	
-	
-	*{}
+	*{font-family: "Fjalla One";}
 	
 	
 body {
@@ -13,7 +18,7 @@ body {
     margin: auto;
 	margin: 0;
 	padding: 0;
-	font-family: Helvetica, Arial, sans-serif;
+	*font-family: Helvetica, Arial, sans-serif;
 	color: #666;
 	font-size: 1em;
 	line-height: 1.5em;
@@ -25,7 +30,7 @@ body {
     width: 60px;
     height: 60px;
 margin-left: 10px;
-	transition: all 0.4s ;
+	transition: all 1s ease-in-out ;
 }
 
 
@@ -33,7 +38,7 @@ margin-left: 10px;
 .logo1:hover{
     background-color: aliceblue;
 	color: white;
-	transform: rotate(180deg);
+	transform: rotate(720deg) scale(1.1);
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
 	border-radius: 15px;
 }
@@ -72,10 +77,13 @@ img {
 	left: 0;
 	top: 0;
 	position: fixed;
+	font-weight: 300;
+	font-family: "Fjalla One";
 }	
 	#main-header a {
-		color: white;
+	
        /*Se puede quitar pero se quita el efecto hover*/ display: flex;
+	   font-size: 1.2rem;
 	}
 	
 	
@@ -108,14 +116,15 @@ nav {
 		padding: 0;
 		list-style: none;
 	
-        display:flex
+        display:flex;
 	}
 	nav ul.nav-menu {
 	flex: 1;
-	*margin-left: 20px;
+	margin-right: 70px;
 	align-items: center;
     justify-content: space-around;
 	width: 70vw;
+	
 	}
 	
 		nav ul li {
@@ -139,9 +148,10 @@ nav {
             }
             nav > ul > li > a:hover{
                 transform: scale(1.1);
-                background: rgba(182, 25, 25, 0.432);
+                background: rgba(0, 0, 0, 0.664);
             border-radius: 15px;
-                box-shadow:  0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+                box-shadow:  0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+				color: rgb(255, 223, 78);
             }
 	/*submenu*/
 nav  ul li ul {
@@ -164,78 +174,31 @@ nav  ul li ul {
 nav ul li:hover ul {
 	visibility: visible;
 	opacity: 1;
-	top: 70px;
+	top: 82px;
 	border-radius: 15px
 
     
 }
 nav ul li ul li a{
 	display: block;
-	color: seashell;
+	color: rgb(255, 255, 255);
 	padding: 14px 0px 14px 14px ;
 	padding-left: 10px;
 	margin-top: 14px; 
 	transition: all 300ms ease;
+	*filter: brightness(150%);
+
 
 
 }
 nav >ul >li>ul >li >a:hover{
 	background: rgb(78, 78, 78);
 	color: white;
+	color: rgb(255, 223, 78);
 	transform: scale(1.1);
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.5);
 	border-radius: 15px;
-}
-/************ 
-//------------------------------
-// SEARCH BOX
-//------------------------------
-************
-
-.box .search-box{
-  position: relative;
-  height: 50px;
-  max-width: 50px;
-  margin: auto;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-#check:checked ~ .search-box{
-  max-width: 380px;
-}
-.search-box input{
- position: absolute;
- height: 100%;
- width: 100%;
- border-radius: 25px;
- background: #fff;
- outline: none;
- border: none;
- padding-left: 20px;
- font-size: 18px;
-}
-.search-box .icon{
-  position: absolute;
-  right: -2px;
-  top: 0;
-  width: 50px;
-  background: #FFF;
-  height: 100%;
-  text-align: center;
-  line-height: 50px;
-  color: #FF676D;
-  font-size: 20px;
-  border-radius: 25px;
-}
-#check:checked ~ .search-box .icon{
-  background: #FF676D;
-  color: #FFF;
-  width: 60px;
-  border-radius: 0 25px 25px 0;
-}
-#check{
-  display: none;
+	filter: brightness(150%);
 }
 
 /************ 
@@ -258,8 +221,8 @@ nav >ul >li>ul >li >a:hover{
 	
     #slider {
 		position: relative;
-		width: 900px;
-		height: 500px;
+		width: 1147.5px;
+		height: 637.5px;
 		margin: 45px auto;
 		font-family: 'Helvetica Neue', sans-serif;
 		perspective: 1400px;
@@ -299,7 +262,7 @@ nav >ul >li>ul >li >a:hover{
 		}
      
 		input[type=radio]:checked {
-		  border: 6px solid black;
+		  border: 8px solid #95afc0;
 		}
 	 
 	  input[type=radio]:nth-child(5) {
@@ -329,6 +292,7 @@ nav >ul >li>ul >li >a:hover{
 		align-items: center;
 		justify-content: center;
 		transition: transform 1000ms ease;
+		cursor: default;
 	  }
 
 	  
@@ -367,52 +331,7 @@ nav >ul >li>ul >li >a:hover{
 
     /*grip principal*/
 
-	.contenedor {
-		width: 90%;
-		max-width:1200px;
-		margin:auto;
-		padding:40px;
-		display:flex;
-		box-sizing: border-box;
-		display: grid;
-		grid-template-columns: 1 auto;
-		gap: 20px;
-		z-index:-1;
-	}
-	.contenedor-duky{
-	display: grid;
-	grid-template-columns:   repeat(2,1fr) ;
-	gap: 20px;
-	
-	}
-	.onedogyear{
-		
-		 border-radius:22px;
-		 min-height:300px;
-		 font-weight:bold;
-		 padding:20px;
-		 position:relative;
-		 overflow: hidden;
-		 background-size: cover;
-		 background-position:center;
-	
-}
-/*efecto hover grip principal*/
 
-.onedogyear .sombras{
-	width: 0%;
-	height: 100%;
-	background-color: rgba(56, 53, 53, 0.570);
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	transition: all 0.4s ;
-	
-}
 .sombras h1{
 color: aliceblue;
 text-shadow: 1px 1px 1px black;
@@ -420,14 +339,6 @@ font-size: 2.5rem;
 text-transform: capitalize;
 font-family:  sans-serif;
 }
-
-.onedogyear:hover .sombras{
-	width: 100%;
-
-}
-
-
-
 	.textos{
 	display: flex;
 	flex-direction: column;
@@ -435,7 +346,14 @@ font-family:  sans-serif;
 	height: 100%;
 	color:rgb(104, 102, 8);
 	border: #000;
+
 	}
+/*h3 modificado*/
+.modificado {
+    TEXT-ALIGN: center;
+    FONT-SIZE: xxx-large;
+    FONT-FAMILY: 'Spartan';
+}
 
 /*grip secundario*/
     .contenedor1{
@@ -450,7 +368,7 @@ font-family:  sans-serif;
         gap: 20px;
       margin:  auto;
 	  justify-content: center;
-    
+      font-family: "Fjalla One"; 
     }
     .contenedor-cajas{
         display: grid;
@@ -509,17 +427,71 @@ font-family:  sans-serif;
          height: 250px; 
      }
 	 
+
+
+
+
+	 
 /************
 //-----------------------------
 // PIE PÁGINA
 //-----------------------------
 ************/
+.contenedor-suscripcion{
+  max-width: 1500px;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: rgba(128, 128, 128, 0.116);
+  font-family: "spartan";
+
+}
+.h1-suscripcion{
+  padding-top: 10px;
+  font-style: italic;
+}
+.h2-suscripcion{
+ font-size: 8px;
+ font-style: italic;
+}
+
+.suscripcion input[type="email"]{
+  padding: 8px 80px;
+  border-radius: 4px;
+  border: none;
+  
+  font-family: "spartan";
+  
+  
+}
+.botones1{
+  width: 170px;
+  height: 32px;
+  font-family: "spartan";
+  font-style: italic;
+  background-color: black;
+  box-shadow: inset 0 0 0 0 white;
+  color: white;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  outline: none;
+  border: none;
+}
+
+.botones1:hover{
+  box-shadow: inset 170px 0 0 0 white;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
  /* Follow */
 .social {
   margin: 50px;
   margin-top: 20px;
   margin-bottom: 0px;
+  font-family: "Fjalla One";
 }
 .social p {
   text-align: center;
@@ -531,7 +503,8 @@ font-family:  sans-serif;
   align-items: center;
   justify-content: center;
 }
-
+.links a i:hover {color:#b2bec3;-webkit-transition: all .3s ease-in-out;}
+.links a i{overflow:hidden;}
 .links a {
   margin: 0 30px;
 }
@@ -552,14 +525,17 @@ font-family:  sans-serif;
   gap: 10px;
   align-items: flex-start;
   justify-content: center;
+  
 }
 
 .footer-container ul {
   margin: 0 auto;
+  
 }
 
 .footer-links li {
   line-height: 2.8;
+  font-family: 'Spartan', sans-serif;
 }
 
  
@@ -578,6 +554,7 @@ font-family:  sans-serif;
 	text-align: center;
 	padding: 20px;
 	margin-top: 40px;
+	
 }
 	#main-footer p {
 		margin: 0;

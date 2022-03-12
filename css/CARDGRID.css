@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@800&display=swap');
+
 .CONTENEDORprincipal{
     *width: 2000px;
     height: 800px;
@@ -8,13 +11,12 @@
     padding:20px;
     box-sizing: border-box;
 	padding-top:60px;
-
 }
 .CONTENEDORderecho{
     *width: 1000px;
     height: 720px;
     *margin: 20px ;
-  
+  margin-top: 80px;
    *justify-items: start;/*para ajustar por donde empieza los cuadros*/
 position: relative;
   
@@ -38,9 +40,9 @@ position: relative;
 width: 226px;
 height: 235px;
   
-    
+    margin-top: 20px;
     gap: 10px;
-    background-image: url("../65%.png");
+    background-image: url(65%.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -52,7 +54,7 @@ height: 235px;
    width: 500px;
    height: 258px;
   margin-left: -80px;
-    background-image: url("../110%.png");
+    background-image: url(110%.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -62,8 +64,8 @@ height: 235px;
 .cartas3{
 width: 305px;
 height: 161px;
-   margin-top: -160px;
-    background-image: url("../80%.png");
+   margin-top: -260px;
+    background-image: url(80%.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -74,8 +76,8 @@ height: 161px;
 .cartas4{
     width: 425px;
     height: 208px;
-margin-top: -160px;
-    background-image: url("../100%.png");
+margin-top: -260px;
+    background-image: url(100%.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -107,7 +109,8 @@ margin-top: -160px;
 .sombras{
 	width: 0%;
 	height: 100%;
-	background-color: rgba(56, 53, 53, 0.570);
+	*background-color: rgba(56, 53, 53, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -115,7 +118,10 @@ margin-top: -160px;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	transition: all 0.4s ease-in;
+	transition: all 0.3s ease-in-out;
+}
+.sombras a{
+	text-decoration:none;
 }
 .sombras1{
 	width: 0%;
@@ -128,10 +134,21 @@ margin-top: -160px;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	transition: all 0.4s ease-in-out ;
+	transition: all 0.3s ease-in-out ;
 
 }
-
+.sombras1 a{
+	text-decoration:none;
+}
+.sombras1 h4{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    *font-family:  sans-serif;
+	font-family: "Fjalla One";
+    text-decoration: none;
+}
 
 
 .sombras h4{
@@ -139,7 +156,8 @@ margin-top: -160px;
     text-shadow: 1px 1px 1px black;
     font-size: 2.5rem;
     text-transform: capitalize;
-    font-family:  sans-serif;
+    font-family: "Fjalla One";
+    text-decoration: none;
 }
 .cartas1:hover .sombras{
 	width: 100%;
