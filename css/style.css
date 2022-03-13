@@ -122,7 +122,22 @@ img{
     line-height: 30px;
     font-weight: 400;
 }
+ .h1{
+   font-family: "spatarn";
 
+ }
+/*bloquuote*/
+.block1{
+  display: flex;
+}
+.icono2 {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  margin-right: 20px;
+}
 
 blockquote {
   margin: 0 auto;

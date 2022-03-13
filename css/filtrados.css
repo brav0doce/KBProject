@@ -17,7 +17,7 @@ body {
     width: 60px;
     height: 60px;
 margin-left: 400px;
-	transition: all 1.0s ease-in-out ;
+	transition: all 0.5s ease-in-out ;
 }
 
 
@@ -66,10 +66,8 @@ img {
 	position: fixed;
 }	
 	#main-header a {
-		*color: white;
-       /*Se puede quitar pero se quita el efecto hover*/ display: flex;
+	  /*Se puede quitar pero se quita el efecto hover*/ display: flex;
 	}
-	
 	
 /*
  * Logo
@@ -80,9 +78,6 @@ img {
 	text-decoration: none;
     
 }
-
-	
-	
 
 /*
  * Navegación
@@ -121,7 +116,7 @@ nav {
 			
             }
             nav > ul > li > a:hover{
-                transform: scale(1.1);
+                *transform: scale(1.1);
                 background: rgba(0, 0, 0, 0.664);
             border-radius: 15px;
                 box-shadow:  0px 0px 0px 2px rgba(0, 0, 0, 0.5);
@@ -181,81 +176,6 @@ nav >ul >li>ul >li >a:hover{
 // CONTENIDO
 //------------------------------
 ************/
-#main-content {
-	background: white;
-	width: 90%;
-	max-width: 800px;
-	margin: 20px auto;
-	box-shadow: 0 0 10px rgba(0,0,0,.1);
-}
-
-	#main-content header,
-	#main-content .content {
-		padding: 40px;
-	}
-	/*video del teclado*/
-	/*#background-video {
-		height: 700px;
-		width: 100%;
-		object-fit: cover;
-		position: absolute;
-		opacity: 0.5;
-		z-index: -1;
-	}*/
-    #slider {
-		position: relative;
-		width: 900px;
-		height: 500px;
-		margin: 45px auto;
-		font-family: 'Helvetica Neue', sans-serif;
-		perspective: 1400px;
-		transform-style: preserve-3d;
-		border: 10px black;
-	 
-	   
-	  }
-	  
-	  input[type=radio] {
-		position: relative;
-		top: 108%;
-		left: 50%;
-		width: 18px;
-		height: 18px;
-		margin: 0 15px 0 0;
-		opacity: 0.4;
-		transform: translateX(-83px);
-		cursor: pointer;
-	  }
-	  
-	  
-	  input[type=radio]:nth-child(5) {
-		margin-right: 0px;
-	  }
-	  
-	  input[type=radio]:checked {
-		opacity: 1;
-	  }
-	  
-	  .img{
-		border-radius: 10px;}
-	  
-	  
-	  #slider label {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		color: white;
-		font-size: 70px;
-		font-weight: bold;
-		border-radius: 5px;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: transform 1000ms ease;
-	  }
 
 /*Contenedor de categorias*/
 
@@ -271,7 +191,8 @@ input[type="radio"]{
     margin-top: 20px;
     position: sticky;
     top: 85px;
-    background-color: rgba(104, 104, 104, 0.26);
+	border-top: 1px solid rgba(128, 128, 128, 0.411);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.452);
     justify-content: center;
     z-index: 2;
 }
@@ -288,18 +209,52 @@ input[type="radio"]{
     justify-content: center;
     align-items: center;
     display: flex;
+	color: #000000;
+	font-family: "spartan";
+	font-weight: 800;
 }
 
 .container-category label:hover{
     opacity: 0.8;
 }
+/*efectos de contenedor de filtrados*/
+
+.a{
+	position: relative;
+	text-decoration: none;
+	font-family: "Fjalla One" ;
+	color: #fff9f9;
+	font-size: 0px;
+	letter-spacing: 0.5px;
+	padding: 0 10px;
+  
+   
+  }
+  
+  .a:after{
+	content: "";
+	position: absolute;
+	background-color: #ff3c78;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+  }
+  .a:hover{
+	color: #ffffff;
+	background: #000000
+  }
+  .a:hover:after{
+	width: 100%;
+  }
 
 
 
 /*Post - Publicaciones*/
 
 .container-post{
-    *max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
 }
 
@@ -323,12 +278,15 @@ input[type="radio"]{
      overflow: hidden;
      background-size: cover;
      background-position:center;
-     border-radius: 10px;
+    
      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
      transition: all 0.3s ease-in-out;
      text-align: center;
      background-color: rgba(243, 243, 243, 0.445);
      border-radius: 10px;
+	 font-family: "fjalla one";
+	 cursor:pointer;
+	
     
 
 }
@@ -336,16 +294,12 @@ input[type="radio"]{
 .cartas:hover{
     transform: translateY(-10px);
     box-shadow:0 10px 12px rgba(124, 124, 124, 0.3); 
+	
+
 
 }
 
-.posts .post{
-    *background: #fff;
-    *box-shadow: 0 0 20px -20px black;
-    *border-radius: 6px;
-    overflow: hidden;
-    *padding-bottom: 20px;
-}
+
 
 .cartas h4{
    
@@ -366,8 +320,25 @@ input[type="radio"]{
 padding: 6px 10px;
   }
 
+.cartas button{
+	width: 100%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-family: "fjalla one";
+	cursor:pointer;
+	font-style: italic;
+}
+.cartas button:hover{
+	opacity: 0.5;
 
 
+}
+.post .cartas .foto3{
+	width: 256px;
+	height: 200px;
+	object-fit: cover;
+	
+}
 
 /*sistema de filtrado*/
 
@@ -391,7 +362,7 @@ padding: 6px 10px;
 [value="110%"]:checked ~ .container-category [for="110%"],
 [value="DUCKY"]:checked ~ .container-category [for="DUCKY"],
 [value="Varmilo"]:checked ~ .container-category [for="Varmilo"]{
-    background: #46a2fd;
+    background: BLACK;
     color: #fff;
 }
 
